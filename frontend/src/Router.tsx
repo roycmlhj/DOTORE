@@ -20,6 +20,8 @@ import { useWeb3React } from "@web3-react/core";
 import { injected } from "./lib/connectors";
 import { login } from "./api/user";
 import { atom, useRecoilState } from 'recoil';
+import web3 from './web3.js';
+import { setDefaultResultOrder } from "dns";
 
 const Container = styled.div`
   min-height: 100%;
@@ -57,6 +59,10 @@ export const userInfoState = atom<userInfoTypes>({
 
 const AppRouter = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const handleNetworkSwitch = (networkName) => {
+  //   // setError();
+  //   changeNetwork({ networkName, setError });
+  // }
   const {
     connector,
     library,
@@ -74,7 +80,7 @@ const AppRouter = () => {
   // 2.1 존재한다면 해당 address로 connect를 시도하여 account가 일치하는지 확인
   // 3 account가 일치한다면 로그인을 시도하여 userInfo를 받아와 전역에 저장
   // 2.2 존재하지 않는다면 로그인 시도 안함
-  
+
   // 계정 주소가 변하면 실행
   useEffect(() => {
     console.log(account);
