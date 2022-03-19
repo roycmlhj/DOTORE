@@ -21,10 +21,11 @@ const networks = {
         // 0x79f5
         chainId: `0x${Number(31221).toString(16)}`,
         chainName: "SSAFY 테스트넷",
-        nativeCurrendy: {
+        nativeCurrency: {
             name: "SSF",
             symbol: "SSF",
-            decimal: 18,
+            decimal: 31221,
+            // decimal: 18,
         },
         rpcUrls: ["http://20.196.209.2:8545"],
         // blockExplorerUrls: [""]
