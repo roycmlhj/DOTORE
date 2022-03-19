@@ -22,6 +22,7 @@ import { login } from "./api/user";
 import { atom, useRecoilState } from 'recoil';
 import web3 from './web3.js';
 import { setDefaultResultOrder } from "dns";
+// declare var window: any
 
 const Container = styled.div`
   min-height: 100%;

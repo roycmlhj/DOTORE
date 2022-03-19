@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ErrorMessage from './ErrorMessage';
 import web3 from 'web3';
+// declare var window: any;
 
 const networks = {
     ssafy: {
@@ -21,35 +22,35 @@ const networks = {
 
 
 
-const ChainId = () => {
-    // const [error, setError] = useState("");
-    const handleNetworkSwitch = async (networkName) => {
-        // setError();
-        // await changeNetwork({ networkName, setError });
-        await changeNetwork({ networkName });
-    };
-
-    const networkChanged = (chainId) => {
-        console.log({ chainId });
-    };
-
-    useEffect(() => {
-        window.ethereum.on("chainChanged", networkChanged);
-
-        return window.ethereum.removeListener("chainChanged", networkChanged);
-        
-    }, []);
+// const ChainId = () => {
+//     // const [error, setError] = useState("");
+//     const handleNetworkSwitch = async (networkName: any) => {
+//         // setError();
+//     // await changeNetwork({ networkName, setError });
+//     await changeNetwork({ networkName });
 
 
+//     // const networkChanged = (chainId) => {
+//     //     console.log(chainId);
+//     // };
 
-    return (
-        <div>
+//     useEffect(() => {
+//     window.ethereum.on("chainChanged", networkChanged);
 
-        </div>
-    );
-};
+//         return window.ethereum.removeListener("chainChanged", networkChanged);
 
-export default ChainId;
+// });
+
+
+
+//     return (
+//     <div>
+
+//        </div>
+//         )
+
+
+// export default ChainId;
 
 // export default function chainIDChange() {
 //     // const [error, setError] = useState("");
