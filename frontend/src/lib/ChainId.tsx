@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ErrorMessage from './ErrorMessage';
-import web3 from 'web3';
+// import web3 from 'web3';
 // declare var window: any;
 
 const networks = {
@@ -73,18 +73,18 @@ const networks = {
 //     }, []);
 // }
 
-const changeNetwork = async ({ networkName, setError }) => {
-    try {
-        if (!window.ethereum) throw new Error("No crypto wallet found");
-        await window.ethereum.request({
-            method: "wallet_addEthereumChain",
-            params: [
-                {
-                    ...networks[networkName]
-                }
-            ]
-        });
-    } catch (err) {
-        // setError(err.message);
-    }
-}
+// const changeNetwork = async ({ networkName, setError }) => {
+//     try {
+//         if (!window.ethereum) throw new Error("No crypto wallet found");
+//         await window.ethereum.request({
+//             method: "wallet_addEthereumChain",
+//             params: [
+//                 {
+//                     ...networks[networkName]
+//                 }
+//             ]
+//         });
+//     } catch (err) {
+//         // setError(err.message);
+//     }
+// }

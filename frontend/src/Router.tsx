@@ -20,7 +20,7 @@ import { useWeb3React } from "@web3-react/core";
 import { injected } from "./lib/connectors";
 import { login } from "./api/user";
 import { atom, useRecoilState } from 'recoil';
-import web3 from './web3.js';
+// import web3 from './lib/web3';
 import { setDefaultResultOrder } from "dns";
 // declare var window: any
 
