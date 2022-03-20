@@ -19,7 +19,7 @@ import { NetworkContextName } from "./constant/misc";
 // import RadialGradientByChainUpdater from './theme/RadialGradientByChainUpdater'
 import getLibrary from "./utils/getLibrary";
 // export const NetworkContextName = 'NETWORK';
-// const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName);
+const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName);
 
 if (!!window.ethereum) {
   window.ethereum.autoRefreshOnNetworkChange = false
@@ -35,11 +35,11 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <Provider store={store}> */}
     <Web3ReactProvider getLibrary={getLibrary}>
-      {/* <Web3ProviderNetwork getLibrary={getLibrary}> */}
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-      {/* </Web3ProviderNetwork> */}
+      <Web3ProviderNetwork getLibrary={getLibrary}>
+        <RecoilRoot>
+          <App />
+        </RecoilRoot>
+      </Web3ProviderNetwork>
     </Web3ReactProvider>
     {/* </Provider> */}
   </React.StrictMode>,
