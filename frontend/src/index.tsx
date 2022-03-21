@@ -47,6 +47,12 @@ export const userInfoState = atom<userInfoTypes>({
   effects_UNSTABLE: [persistAtom],
 });
 
+// 브라우저 너비
+export const viewWidthState = atom({
+  key: "viewWidthState",
+  default: window.innerWidth,
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
